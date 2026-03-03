@@ -54,14 +54,14 @@ namespace RandomImageApp
             btnShow.Click += BtnShow_Click;
             this.Controls.Add(btnShow);
 
-           // Button btnDownload = new Button();
-           // btnDownload.Name = "btnDownload";
-           // btnDownload.Text = "Скачать картинку";
-           // btnDownload.Location = new Point(260, 350);
-           // btnDownload.Size = new Size(200, 35);
-           // btnDownload.Click += BtnDownload_Click;
-           // btnDownload.Enabled = false;
-           // this.Controls.Add(btnDownload);
+           Button btnDownload = new Button();
+           btnDownload.Name = "btnDownload";
+           btnDownload.Text = "Скачать картинку";
+           btnDownload.Location = new Point(260, 350);
+           btnDownload.Size = new Size(200, 35);
+           btnDownload.Click += BtnDownload_Click;
+           btnDownload.Enabled = false;
+           this.Controls.Add(btnDownload);
         }
 
         private async void BtnShow_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace RandomImageApp
 
                 labelStatus.Text = "Картинка загружена!";
                 Button btnDownload = (Button)this.Controls["btnDownload"];
-               // btnDownload.Enabled = true;
+               btnDownload.Enabled = true;
             }
             catch (Exception ex)
             {
